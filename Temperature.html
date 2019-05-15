@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (c) {
+        this.c = c;
+        this.doiF = function (c) {
+            return 1.8 * c + 32;
+        };
+        this.doiK = function (c) {
+            return c + 273.15;
+        };
+    };
+    let doC = new Temperature();
+    doC.c = parseFloat(prompt("Nhập độ C"));
+    let F = doC.doiF(doC.c);
+    alert("Độ F là: " + F);
+    let K = doC.doiK(doC.c);
+    alert("Độ K là: " + K);
+</script>
+</body>
+</html>
